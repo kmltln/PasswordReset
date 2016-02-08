@@ -1,0 +1,27 @@
+﻿
+@model List<PasswordReset.Models.AdUser>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@foreach (var user in Model)
+{
+  
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.Label(user.SamAccountName)
+        
+        
+    </div>
+    <div class="col-md-4">
+        @Html.Label(user.Path)
+    </div>
+    <div class="col-md-4">
+        @Html.Label(user.WhenChanged)
+    </div>
+</div>
+}
